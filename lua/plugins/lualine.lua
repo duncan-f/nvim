@@ -31,14 +31,14 @@ local buffers = {
 
 	symbols = {
 		modified = " ●", -- Text to show when the buffer is modified
-		alternate_file = "@", -- Text to show to identify the alternate file
+		alternate_file = "@ ", -- Text to show to identify the alternate file
 		directory = "", -- Text to show when the buffer is a directory
 	},
 }
 
 require("lualine").setup({
 	options = {
-		theme = "carbonfox",
+		theme = "auto",
 		icons_enabled = true,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
@@ -72,8 +72,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { branch, "diff", "diagnostics" },
-		lualine_c = {},
-		lualine_x = {
+		lualine_c = {
 			{
 				function()
 					return ""
@@ -86,7 +85,11 @@ require("lualine").setup({
 					vim.cmd("PackUpdate")
 				end,
 			},
-			{ "encoding", "fileformat", "filetype" },
+		},
+		lualine_x = {
+			"encoding",
+			"fileformat",
+			"filetype",
 		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },

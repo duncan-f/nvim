@@ -75,16 +75,16 @@ end)
 keymap.set("n", "<leader>gg", vim.cmd.Git, { desc = "Git (Fugitive)" })
 
 local bufnr = vim.api.nvim_get_current_buf()
-local options = { buffer = bufnr, remap = false }
+local opt = { buffer = bufnr, remap = false }
 keymap.set("n", "<leader>gp", function()
 	vim.cmd.Git({ "push" })
-end, options)
+end, opt)
 
 -- rebase always
 keymap.set("n", "<leader>gP", function()
 	vim.cmd.Git({ "pull", "--rebase" })
-end, options)
+end, opt)
 
 -- NOTE: It allows me to easily set the branch i am pushing and any tracking
 -- needed if i did not set the branch up correctly
-keymap.set("n", "<leader>gt", ":Git push -u origin ", options)
+keymap.set("n", "<leader>gt", ":Git push -u origin ", opt)

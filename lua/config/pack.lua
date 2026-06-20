@@ -16,9 +16,9 @@ vim.pack.add({
 	},
 	-- Telescope
 	{
-    src = "https://github.com/nvim-telescope/telescope.nvim",
-    version = "master"
-  },
+		src = "https://github.com/nvim-telescope/telescope.nvim",
+		version = "master",
+	},
 	{
 		src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",

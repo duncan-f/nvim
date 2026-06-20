@@ -22,7 +22,7 @@ opt.termguicolors = true
 opt.updatetime = 50
 opt.colorcolumn = "80"
 opt.signcolumn = "yes"
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
 opt.isfname:append("@-@")
@@ -32,10 +32,6 @@ opt.pumborder = "rounded"
 opt.bg = "dark"
 opt.hidden = true
 opt.errorbells = false
-opt.swapfile = false
-opt.backup = false
-opt.undodir = vim.fn.stdpath("config") .. "/undodir"
-opt.undofile = true
 opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
@@ -45,6 +41,15 @@ opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
+
+local undodir = vim.fn.stdpath("config") .. "/undodir"
+if vim.fn.isdirectory(undodir) == 0 then
+	vim.fn.mkdir(undodir, "p")
+end
+opt.undodir = undodir
+opt.swapfile = false
+opt.backup = false
+opt.undofile = true
 
 -- Cursor settings
 opt.guicursor = {
@@ -57,3 +62,8 @@ opt.guicursor = {
 }
 opt.timeout = true
 opt.timeoutlen = 300
+
+-- Folding: requires treesitter available at runtime; safe fallback if not
+opt.foldmethod = "expr" -- use expression for folding
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter for folding
+opt.foldlevel = 99 -- start with all folds open

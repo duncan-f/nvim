@@ -33,7 +33,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, opts)
 		vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-		vim.keymap.set({ "n", "x" }, "<leader><leader>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+		vim.keymap.set({ "n", "x" }, "<leader><leader>", function()
+			vim.lsp.buf.format({ async = true })
+		end, opts)
 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 	end,
 })
@@ -114,8 +116,8 @@ cmp.setup({
 		completeopt = "menu,menuone,preview,noselect",
 	},
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered({ border = "rounded" }),
+		documentation = cmp.config.window.bordered({ border = "rounded" }),
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
