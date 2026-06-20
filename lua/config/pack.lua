@@ -1,6 +1,6 @@
 -- Package Manager
 vim.pack.add({
-	{ src = "https://github.com/EdenEast/nightfox.nvim", name = "carbonfox" },
+	"https://github.com/olimorris/onedarkpro.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/nvim-lua/plenary.nvim",
