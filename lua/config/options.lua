@@ -44,8 +44,16 @@ opt.iskeyword:append("-")
 opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
-opt.guicursor =
-	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 opt.encoding = "UTF-8"
+
+-- Cursor settings
+opt.guicursor = {
+	"n-v-c:block", -- Normal, Visual, Command-line
+	"i-ci-ve:block", -- Insert, Command-line Insert, Visual-exclusive
+	"r-cr:hor20", -- Replace, Command-line Replace
+	"o:hor50", -- Operator-pending
+	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor", -- All modes: blinking & highlight groups
+	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch mode
+}
 opt.timeout = true
 opt.timeoutlen = 300

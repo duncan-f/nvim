@@ -16,7 +16,6 @@ require("telescope").setup({
 		find_files = {
 			theme = "dropdown",
 			prompt_prefix = "🔎 ",
-			find_command = "rg",
 		},
 		-- Now the picker_config_key will be applied every time you call this
 		-- builtin picker
