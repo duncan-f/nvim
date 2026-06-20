@@ -198,7 +198,7 @@ Leader key is set to `,` (comma). Below is a comprehensive table of all keymaps:
 
 1. Clone this repository into your Neovim config directory (usually `~/.config/nvim`):
    ```bash
-   git clone https://github.com/your-username/your-config.git ~/.config/nvim
+   git clone https://github.com/duncan-f/nvim.git ~/.config/nvim
    ```
 2. Ensure you are using Neovim nightly (0.13+). The `vim.pack` API is only available in recent nightly builds.
 3. Start Neovim – all plugins will be installed automatically via `vim.pack`.
