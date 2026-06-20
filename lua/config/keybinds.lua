@@ -3,7 +3,8 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 local keymap = vim.keymap
 
-local opts = { noremap = true, silent = true }
+local bufnr = vim.api.nvim_get_current_buf()
+local opts = { buffer = bufnr, noremap = true, silent = true }
 
 keymap.set("n", "J", "mzJ`z") -- Remap joining lines
 keymap.set("n", "<C-d>", "<C-d>zz") -- Keep cursor in place while moving up/down page
@@ -70,3 +71,19 @@ keymap.set("n", "<leader>pw", ":!opout <c-r>%<CR><CR>")
 keymap.set("n", "<leader>so", function()
 	vim.cmd("so")
 end)
+
+-- Git (Fugitive)
+keymap.set("n", "<leader>gg", vim.cmd.Git, { desc = "Git (Fugitive)" })
+
+keymap.set("n", "<leader>gp", function()
+	vim.cmd.Git({ "push" })
+end, opts)
+
+-- rebase always
+keymap.set("n", "<leader>gP", function()
+	vim.cmd.Git({ "pull", "--rebase" })
+end, opts)
+
+-- NOTE: It allows me to easily set the branch i am pushing and any tracking
+-- needed if i did not set the branch up correctly
+keymap.set("n", "<leader>gt", ":Git push -u origin ", opts)

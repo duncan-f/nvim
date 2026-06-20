@@ -138,6 +138,7 @@ Leader key is set to `,` (comma). Below is a comprehensive table of all keymaps:
 | `<leader>ff` | Normal | Find files |
 | `<leader>fG` | Normal | Find files (Git tracked) |
 | `<leader>fg` | Normal | Live grep |
+| `<leader>fs` | Normal | Grep string |
 | `<leader>fb` | Normal | List buffers |
 | `<leader>fh` | Normal | Help tags |
 
