@@ -29,9 +29,16 @@ Starting with Neovim 0.13, the built‑in `vim.pack` provides a lightweight, nat
 | `:PackDel plugin`    | Delete one or more installed plugins |
 | `:PackUpdate`        | Update all plugins; pass names to update specific ones (e.g., `:PackUpdate telescope.nvim`) |
 
+### Keymaps
+
+| Keymap | Mode | Description |
+|--------|------|-------------|
+| `<leader>pu` | Normal | Update all plugins at once |
+| `<leader>pc` | Normal | Clean all unused plugins |
+
 These commands are defined in `commands.lua` and use `vim.pack.add()`, `vim.pack.del()`, and `vim.pack.update()` under the hood.
 
-Source: [Repo](https://github.com/Sin-cy/nvim-scratch/) [File](https://raw.githubusercontent.com/Sin-cy/nvim-scratch/refs/heads/main/lua/commands.lua)
+Source: [Repo](https://github.com/Sin-cy/nvim-scratch/) -- [File](https://raw.githubusercontent.com/Sin-cy/nvim-scratch/refs/heads/main/lua/commands.lua)
 
 ---
 
@@ -123,6 +130,7 @@ Leader key is set to `,` (comma). Below is a comprehensive table of all keymaps:
 | Keymap | Mode | Description |
 |--------|------|-------------|
 | `<leader>aa` | Normal | Add current file to Harpoon list |
+| `<leader>fl` | Normal | Display Harpoon quick menu (Telescope) |
 | `<C-e>` | Normal | Toggle Harpoon quick menu |
 | `<M-1>` | Normal | Select Harpoon item 1 |
 | `<M-2>` | Normal | Select Harpoon item 2 |

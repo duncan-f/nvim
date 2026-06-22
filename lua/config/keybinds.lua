@@ -88,3 +88,7 @@ end, opt)
 -- NOTE: It allows me to easily set the branch i am pushing and any tracking
 -- needed if i did not set the branch up correctly
 keymap.set("n", "<leader>gt", ":Git push -u origin ", opt)
+
+-- NOTE: Package management
+keymap.set("n", "<leader>pu", vim.cmd.PackUpdate, { desc = "Update all plugins" })
+keymap.set("n", "<leader>pc", vim.cmd.PackClean, { desc = "Clean unsued plugins" })

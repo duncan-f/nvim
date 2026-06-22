@@ -26,7 +26,6 @@ vim.pack.add({
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/mbbill/undotree",
 	"https://github.com/brenoprata10/nvim-highlight-colors",
-	"https://github.com/captbaritone/better-indent-support-for-php-with-html",
 	-- Autocompletion
 	"https://github.com/hrsh7th/nvim-cmp",
 	"https://github.com/hrsh7th/cmp-buffer",
