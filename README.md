@@ -28,6 +28,7 @@ Starting with Neovim 0.13, the built‑in `vim.pack` provides a lightweight, nat
 | `:PackAdd user/repo` | Install one or more plugins (e.g., `:PackAdd tpope/vim‑fugitive`) |
 | `:PackDel plugin`    | Delete one or more installed plugins |
 | `:PackUpdate`        | Update all plugins; pass names to update specific ones (e.g., `:PackUpdate telescope.nvim`) |
+| `:PackClean`         | Clean all unused plugins |
 
 ### Keymaps
 
@@ -52,17 +53,12 @@ All plugins are declared in `pack.lua` using `vim.pack.add()`. Below is a list w
 | [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Icons for various filetypes |
 | [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Statusline |
 | [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim) | Utility library (required by many plugins) |
-| [MunifTanjim/nui.nvim](https://github.com/MunifTanjim/nui.nvim) | UI components |
-| [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify) | Notification system |
-| [folke/noice.nvim](https://github.com/folke/noice.nvim) | UI for messages, cmdline, and popups |
 | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) | Git wrapper |
 | [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Treesitter parser and highlighting |
 | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [nvim-telescope/telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | FZF‑like sorting for Telescope |
-| [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | Keymap help popup |
 | [mbbill/undotree](https://github.com/mbbill/undotree) | Undo history visualisation |
 | [brenoprata10/nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) | Highlight color codes |
-| [captbaritone/better-indent-support-for-php-with-html](https://github.com/captbaritone/better-indent-support-for-php-with-html) | Improved PHP/HTML indentation |
 | [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Autocompletion engine |
 | [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer) | Buffer source for nvim‑cmp |
 | [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path) | Path source |

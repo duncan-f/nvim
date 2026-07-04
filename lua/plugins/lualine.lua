@@ -2,6 +2,22 @@ local datetime = {
 	"datetime",
 	style = "%a. %b. %d | %H:%M",
 }
+local lsp_status = {
+	"lsp_status",
+	icon = { "󱖫", color = { fg = "#a6d4de" } }, -- f013
+	symbols = {
+		-- Standard unicode symbols to cycle through for LSP progress:
+		spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+		-- Standard unicode symbol for when LSP is done:
+		done = "✓",
+		-- Delimiter inserted between LSP names:
+		separator = " ",
+	},
+	-- List of LSP names to ignore (e.g., `null-ls`):
+	ignore_lsp = {},
+	-- Display the LSP name
+	show_name = false,
+}
 local branch = { "branch", icon = { "", color = { fg = "#a6d4de" } }, "|" }
 local buffers = {
 	"buffers",
@@ -40,8 +56,8 @@ require("lualine").setup({
 	options = {
 		theme = "auto",
 		icons_enabled = true,
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = "|", right = "|" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
 			winbar = {},
@@ -73,6 +89,7 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = { branch, "diff", "diagnostics" },
 		lualine_c = {
+			lsp_status,
 			{
 				function()
 					return ""
