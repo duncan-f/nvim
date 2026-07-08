@@ -49,7 +49,7 @@ All plugins are declared in `pack.lua` using `vim.pack.add()`. Below is a list w
 
 | Plugin | Description |
 |--------|-------------|
-| [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) | Carbonfox colorscheme |
+| [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) | Colorscheme: tokyonight, Style: night |
 | [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Icons for various filetypes |
 | [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Statusline |
 | [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim) | Utility library (required by many plugins) |
@@ -194,7 +194,7 @@ Leader key is set to `,` (comma). Below is a comprehensive table of all keymaps:
   - Undo directory, split behavior, mouse support, clipboard integration.
 
 - **Commands** (`commands.lua`):
-  - `PackAdd`, `PackDel`, `PackUpdate` – manage plugins with `vim.pack`.
+  - `PackAdd`, `PackDel`, `PackUpdate`, `PackClean` – manage plugins with `vim.pack`.
 
 ---
 
