@@ -3,7 +3,7 @@ vim.pack.add({
 	"https://github.com/brenoprata10/nvim-highlight-colors",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lualine/lualine.nvim",
-	"https://github.com/EdenEast/nightfox.nvim",
+	"https://github.com/folke/tokyonight.nvim",
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/tpope/vim-fugitive",
 	"https://github.com/mbbill/undotree",
