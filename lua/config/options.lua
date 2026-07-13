@@ -1,7 +1,7 @@
 vim.g.netrw_banner = 0
 vim.g.netrw_keepdir = 0
--- vim.g.netrw_liststyle = 0
--- vim.g.netrw_browse_split = 3
+vim.g.netrw_liststyle = 0
+vim.g.netrw_browse_split = 3
 vim.g.netrw_winsize = 16
 
 local opt = vim.opt
@@ -24,7 +24,7 @@ opt.termguicolors = true
 opt.updatetime = 50
 opt.colorcolumn = "80"
 opt.signcolumn = "yes"
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
 opt.isfname:append("@-@")

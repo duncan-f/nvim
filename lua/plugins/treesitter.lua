@@ -17,6 +17,7 @@ local ensure_installed = {
 	"vim",
 	"vimdoc",
 	"c",
+	"regex",
 	"dockerfile",
 	"gitignore",
 	"astro",
@@ -31,7 +32,7 @@ treesitter.setup({
 	-- enable indentation
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
-	-- autotag = { enable = true },
+	autotag = { enable = true },
 	-- ensure these language parsers are installed
 	ensure_installed = ensure_installed,
 	-- auto install above language parsers
