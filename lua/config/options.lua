@@ -1,7 +1,7 @@
 vim.g.netrw_banner = 0
-vim.g.netrw_keepdir = 0
-vim.g.netrw_liststyle = 0
-vim.g.netrw_browse_split = 3
+-- vim.g.netrw_keepdir = 0
+-- vim.g.netrw_liststyle = 0
+-- vim.g.netrw_browse_split = 0
 vim.g.netrw_winsize = 16
 
 local opt = vim.opt
@@ -63,7 +63,7 @@ opt.guicursor = {
 	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch mode
 }
 opt.timeout = true
-opt.timeoutlen = 300
+opt.timeoutlen = 3000
 
 -- Folding: requires treesitter available at runtime; safe fallback if not
 opt.foldmethod = "expr" -- use expression for folding

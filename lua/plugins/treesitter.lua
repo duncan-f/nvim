@@ -21,6 +21,7 @@ local ensure_installed = {
 	"dockerfile",
 	"gitignore",
 	"astro",
+	"ruby",
 }
 
 treesitter.setup({
