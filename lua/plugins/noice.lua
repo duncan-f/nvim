@@ -1,4 +1,11 @@
 require("noice").setup({
+	routes = {
+		{
+			-- Route regular print/echo messages to notify view instead of hiding them
+			filter = { event = "msg_show", kind = "" },
+			opts = { skip = false, view = "notify" },
+		},
+	},
 	lsp = {
 		-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 		override = {

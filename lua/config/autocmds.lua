@@ -120,3 +120,28 @@ vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
 	pattern = "*",
 	callback = update_todo_signs,
 })
+
+-- Fix Netrw [No Name] buffer leak
+vim.api.nvim_create_autocmd("BufEnter", {
+	group = vim.api.nvim_create_augroup("NetrwCleanNoName", { clear = true }),
+	pattern = "*",
+	callback = function()
+		-- Check if the current buffer is a netrw directory listing
+		if vim.bo.filetype == "netrw" then
+			local buffers = vim.api.nvim_list_bufs()
+			for _, bufnr in ipairs(buffers) do
+				-- Find loaded, unnamed, completely empty buffers
+				if
+					vim.api.nvim_buf_is_loaded(bufnr)
+					and vim.api.nvim_buf_get_name(bufnr) == ""
+					and vim.api.nvim_buf_get_option(bufnr, "buftype") == ""
+					and vim.api.nvim_buf_line_count(bufnr) == 1
+					and vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] == ""
+				then
+					-- Safely delete the ghost buffer
+					vim.api.nvim_buf_delete(bufnr, { force = true })
+				end
+			end
+		end
+	end,
+})

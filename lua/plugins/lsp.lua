@@ -83,7 +83,7 @@ vim.lsp.config("lua_ls", {
 				version = "LuaJIT",
 			},
 			diagnostics = {
-				globals = { "vim" },
+				globals = { "vim", "hl" },
 			},
 			telemetry = { enable = true },
 			workspace = {

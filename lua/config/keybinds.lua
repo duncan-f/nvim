@@ -92,3 +92,5 @@ keymap.set("n", "<leader>gt", ":Git push -u origin ", opt)
 -- NOTE: Package management
 keymap.set("n", "<leader>pu", vim.cmd.PackUpdate, { desc = "Update all plugins" })
 keymap.set("n", "<leader>pc", vim.cmd.PackClean, { desc = "Clean unsued plugins" })
+
+keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
