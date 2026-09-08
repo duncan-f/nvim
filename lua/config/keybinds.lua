@@ -12,7 +12,7 @@ keymap.set("n", "n", "nzzzv") -- center screen when looping search results
 keymap.set("n", "N", "Nzzzv")
 
 -- Directory Navigation
-keymap.set("n", "<leader>n", vim.cmd.Lex, opts)
+keymap.set("n", "<leader>n", vim.cmd.Ex, opts)
 keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Pane Navigation

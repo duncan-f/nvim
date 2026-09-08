@@ -11,6 +11,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		ruby = { "rubocop" },
 	},
 	formatters = {
 		black = {
@@ -19,7 +20,8 @@ require("conform").setup({
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
+		asunc = false,
 		timeout_ms = 500,
-		lsp_format = "fallback",
+		lsp_fallback = true,
 	},
 })

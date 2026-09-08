@@ -134,7 +134,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 				if
 					vim.api.nvim_buf_is_loaded(bufnr)
 					and vim.api.nvim_buf_get_name(bufnr) == ""
-					and vim.api.nvim_buf_get_option(bufnr, "buftype") == ""
 					and vim.api.nvim_buf_line_count(bufnr) == 1
 					and vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] == ""
 				then
